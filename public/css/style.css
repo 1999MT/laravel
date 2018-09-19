@@ -1,0 +1,26 @@
+* {
+    font-size: 18px;
+}
+
+.nav {
+    background: #333;
+    height: 35px;
+    line-height: 35px;
+    padding: 0 50px;
+}
+
+.nav a {
+    display: block;
+    float: left;
+    width: 80px;
+    color: white;
+    font-size: 18px;
+    font-family: '微软雅黑';
+    text-align: center;
+    text-decoration: none;
+}
+
+.nav a.cur {
+    background: purple;
+    color: white;
+}

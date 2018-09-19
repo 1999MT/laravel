@@ -1,0 +1,69 @@
+create database laravel;
+
+create table cms_admin(
+	id int key auto_increment,
+	username varchar(30) not null unique,
+	password varchar(32) not null
+);
+
+create table cms_category(
+id int key auto_increment,
+pid int not null,
+cname varchar(30) not null,
+status tinyint(1) unsigned not null default 0
+);
+
+
+create table cms_news(
+id int key auto_increment,
+title varchar(255),
+content text,
+typeid int,
+path varchar(100),
+addtime datetime,
+updatetime datetime
+);
+
+create table cms_user(
+ id int key auto_increment,
+ username varchar(20) unique,
+ password varchar(32),
+ email varchar(100),
+ mobile varchar(20),
+ intro text,
+ birthday date,
+ ip int unsigned,
+ regtime int
+);
+
+create table cms_brand(
+	id int key auto_increment,
+	bname char(30),
+	path varchar(255),
+	typeid int,
+	status tinyint(1) default  0
+);
+create table cms_product(
+	id int key auto_increment,
+	title varchar(255),
+	brandid int,
+	typestr varchar(255) comment '分类的id组',
+	price varchar(20),
+	userprice varchar(20),
+	salenum int comment '优惠的数量',
+	saleprice varchar(20) comment '优惠的价格',
+	libnum int unsigned,
+	content text,
+	style text comment '规格参数',
+	createtime datetime,
+	updatetime datetime,
+	status tinyint(1) default 0
+);
+
+create table cms_productimage(
+	id int key auto_increment,
+	path varchar(255),
+	productid int
+);
+
+

@@ -1,0 +1,31 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    font-family: '微软雅黑';
+}
+
+.header {
+    height: 65px;
+    line-height: 65px;
+}
+
+.container {
+    overflow: hidden;
+}
+
+.left {
+    float: left;
+    width: 15%;
+}
+
+.right {
+    float: right;
+    width: 85%;
+}
+
+.message {
+    border: 1px solid purple;
+    padding: 3px 5px;
+    background: #f2f2f2;
+}
